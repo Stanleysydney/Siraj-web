@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html lang="en">
+<head></head>
+<style>
+    title {
+        font-family: 'Segoe UI', Arial, sans-serif !important;
+        font-weight: bold !important;
+        color: #fff !important;
+        letter-spacing: 1px;
+    }
+    .profile-name {
+        font-family: 'Segoe UI', Arial, sans-serif !important;
+        font-weight: bold !important;
+        color: #fff !important;
+    }
+    /* Space for images in other webpages */
+    .image-space {
+        width: 100%;
+        height: 220px;
+        background: rgba(255,255,255,0.07);
+        border-radius: 12px;
+        margin: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.1rem;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        border: 2px dashed #2563eb;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siraj Bishar Portfolio</title>
+    <style>
+        html, body {
+            font-family: 'Segoe UI', 'Unica One', 'Inter', Arial, sans-serif !important;
+        }
+        body {
+            background: #0a174e !important;
+        }
+        body.dark-mode {
+            background: #0a174e !important;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Segoe UI', 'Unica One', 'Inter', Arial, sans-serif !important;
+            font-weight: bold !important;
+        }
+        .testimonial:before {
+            content: '"';
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            position: absolute;
+            left: 10px;
+            top: -10px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .view-portfolio-btn::after {
+            content: ' →';
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .stack-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .stack-box {
+            background: rgba(255,255,255,0.13);
+            color: #fff;
+            border-radius: 10px;
+            padding: 1.1rem 2.2rem;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        /* Extra space for images */
+        .extra-image-space {
+            width: 100%;
+            height: 220px;
+            background: rgba(255,255,255,0.07);
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            border: 2px dashed #2563eb;
+        }
+        /* Footer left text */
+        .footer-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        @media (max-width: 700px) {
+            .footer-flex { flex-direction: column; gap: 0.7rem; align-items: flex-start; }
+        }
+    </style>
+    <!-- Google Fonts: Unica One & Inter for contrast -->
+    <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #60a5fa;
+            --accent: #fbbf24;
+            --warm: #f59e42;
+            --white: #fff;
+            --dark: #18181b;
+            --testimonial-bg: #1e293b;
+            --testimonial-text: #fff;
+        }
+        body {
+            font-family: 'Unica One', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--primary) 60%, var(--secondary) 100%);
+            margin: 0;
+            padding: 0;
+            color: var(--white);
+            min-height: 100vh;
+            transition: background 0.3s;
+        }
+        body.dark-mode {
+            background: linear-gradient(135deg, #18181b 60%, #334155 100%);
+            color: var(--white);
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem 2rem 1.2rem 2rem;
+            background: rgba(24,24,27,0.7);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-family: 'Unica One', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent);
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a.active, nav a:hover {
+            background: var(--warm);
+            color: var(--dark);
+        }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .dark-toggle {
+            background: var(--warm);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: background 0.2s;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-btn {
+            background: var(--secondary);
+            color: var(--white);
+            border: none;
+            border-radius: 20px;
+            padding: 0.4rem 1rem;
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: var(--primary);
+            color: var(--white);
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            padding: 1rem;
+            z-index: 20;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        .dropdown.show .dropdown-content {
+            display: block;
+        }
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--accent);
+            background: var(--white);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+        }
+        .profile-name {
+            font-family: 'Unica One', cursive;
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-top: 1rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .profile-title {
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        .view-portfolio-btn {
+            margin-top: 1.2rem;
+            background: var(--warm);
+            color: var(--dark);
+            font-family: 'Unica One', cursive;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 24px;
+            padding: 0.7rem 2.2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: background 0.2s, color 0.2s;
+        }
+        .view-portfolio-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        /* Sections */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        section {
+            display: none;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+        }
+        section.active {
+            display: block;
+        }
+        h2, h3 {
+            font-family: 'Unica One', cursive;
+            color: var(--white);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        h3 {
+            font-size: 1.3rem;
+        }
+        /* About Section */
+        .about-text {
+            font-family: 'Inter', Arial, sans-serif;
+            color: var(--white);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        /* Tech Skills */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin: 1.2rem 0 0.5rem 0;
+        }
+        .skill-btn {
+            background: var(--primary);
+            color: var(--white);
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 700;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .skill-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+        .project {
+            background: var(--secondary);
+            color: var(--white);
+            border-radius: 10px;
+            padding: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+        .project:hover {
+            transform: translateY(-6px) scale(1.03);
+            background: var(--accent);
+            color: var(--primary);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+        }
+        /* Testimonials */
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+        .testimonial {
+            background: var(--testimonial-bg);
+            color: var(--testimonial-text);
+            border-radius: 10px;
+            padding: 1.2rem 1rem;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+            position: relative;
+        }
+        .testimonial:before {
+            content: "“";
+            font-size: 2.5rem;
+            color: var(--accent);
+            position: absolute;
+            left: 10px;
+            top: -10px;
+        }
+        .testimonial-client {
+            font-family: 'Unica One', cursive;
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-top: 0.7rem;
+            font-weight: bold;
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: var(--white);
+            color: var(--dark);
+            margin: auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.7rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        /* Contact */
+        form input, form textarea {
+            width: 100%;
+            padding: 0.6rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 1rem;
+        }
+        form button {
+            padding: 0.6rem 2rem;
+            border: none;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Unica One', cursive;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        form button:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        .success-message {
+            color: var(--accent);
+            margin-top: 1rem;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            main { padding: 1rem; }
+            .projects { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 700px) {
+            header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            nav { flex-wrap: wrap; gap: 0.7rem; }
+            .header-actions { margin-left: auto; }
+            .profile-section { margin-top: 1.2rem; }
+        }
+        @media (max-width: 500px) {
+            .profile-pic { width: 90px; height: 90px; }
+            .profile-name { font-size: 1.3rem; }
+            .modal-content { padding: 1rem; }
+            section { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="logo">Siraj Bishar</span>
+        <nav>
+            <a class="active" data-section="about">About</a>
+            <a data-section="projects">Projects</a>
+            <a data-section="testimonials">Testimonials</a>
+            <a data-section="skills">Tech Skills</a>
+            <a data-section="getintouch">Get in Touch</a>
+            <a data-section="stack">Stack</a>
+        </nav>
+        <div class="header-actions">
+            <button class="dark-toggle" id="darkToggle" title="Toggle dark mode"></button>
+            <div class="dropdown" id="dropdown">
+                <button class="dropdown-btn" id="dropdownBtn">About Website ⏷</button>
+                <div class="dropdown-content">
+                    <strong>About this Website</strong>
+                    <br><br>
+                    This is Siraj Bishar's interactive portfolio, built to showcase my projects, skills, and testimonials. Explore each section to learn more about my journey as an eager software developer!
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="profile-section">
+        <img src="your-picture.jpg" alt="Siraj Bishar" class="profile-pic">
+        <div class="profile-name">Siraj Bishar</div>
+        <div class="profile-title">Web Developer | Designer | Programmer</div>
+        <button class="view-portfolio-btn" onclick="window.location.href='#projects'">View my Portfolio</button>
+    </div>
+    <main>
+        <!-- About -->
+        <section id="about" class="active">
+            <h2>About Me</h2>
+            <div class="about-text">
+                Hello! I'm Siraj Bishar, a passionate and creative software developer with a keen eye for design and a love for building interactive web experiences.<br><br>
+                My journey in tech is driven by curiosity and a desire to solve real-world problems with code. I thrive in collaborative environments and am always eager to learn new technologies.<br><br>
+                <strong>Let's build something amazing together!</strong>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project" data-title="Project One" data-description="A web application that helps users manage tasks efficiently with a beautiful UI and real-time collaboration.">
+                    <h3>Project One</h3>
+                    <p>Task management app with real-time features.</p>
+                </div>
+                <div class="project" data-title="Project Two" data-description="A portfolio website template designed for creative professionals, featuring smooth animations and responsive layouts.">
+                    <h3>Project Two</h3>
+                    <p>Modern portfolio template for creatives.</p>
+                </div>
+                <div class="project" data-title="Project Three" data-description="An e-commerce platform with secure payments, product reviews, and a seamless shopping experience.">
+                    <h3>Project Three</h3>
+                    <p>Full-featured e-commerce platform.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    Siraj exceeded our expectations! His attention to detail and creative solutions brought our vision to life.
+                    <div class="testimonial-client">– Amina K.</div>
+                </div>
+                <div class="testimonial">
+                    Working with Siraj was a pleasure. He communicates clearly and delivers high-quality work on time.
+                    <div class="testimonial-client">– John M.</div>
+                </div>
+                <div class="testimonial">
+                    I highly recommend Siraj for any web project. His technical skills and professionalism are top-notch!
+                    <div class="testimonial-client">– Fatima S.</div>
+                </div>
+            </div>
+        </section>
+        <!-- Tech Skills -->
+        <section id="skills">
+            <h2>Tech Skills</h2>
+            <div class="skills-list">
+                <button class="skill-btn">HTML5</button>
+                <button class="skill-btn">CSS3</button>
+                <button class="skill-btn">JavaScript</button>
+                <button class="skill-btn">React</button>
+                <button class="skill-btn">Node.js</button>
+                <button class="skill-btn">Python</button>
+                <button class="skill-btn">Figma</button>
+                <button class="skill-btn">Git</button>
+                <button class="skill-btn">MongoDB</button>
+                <button class="skill-btn">TypeScript</button>
+            </div>
+        </section>
+        <!-- Get in Touch -->
+        <section id="getintouch">
+            <h2>Get in Touch</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+                <div class="success-message" id="successMessage" style="display:none;">Thank you for contacting me!</div>
+            </form>
+            <br>
+            <p>Email: sirajbishar@yahoo.com</p>
+            <p>LinkedIn: <a href="#" target="_blank" style="color:var(--accent);text-decoration:underline;">Siraj Bishar</a></p>
+        </section>
+        <!-- Stack -->
+        <section id="stack">
+            <h2>My Stack</h2>
+            <div class="about-text">
+                <strong>Coming soon:</strong> Here you'll find a creative showcase of my full stack, tools, and frameworks as an eager software developer!
+            </div>
+        </section>
+    </main>
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <footer style="text-align:center;padding:1.2rem 0;background:rgba(24,24,27,0.7);color:var(--white);margin-top:2rem;font-family:'Inter',Arial,sans-serif;">
+        &copy; 2024 Siraj Bishar. All rights reserved.
+    </footer>
+    <script>
+        // Navigation interactivity
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('main section');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                sections.forEach(sec => sec.classList.remove('active'));
+                document.getElementById(link.dataset.section).classList.add('active');
+                // Scroll to main for mobile
+                if (window.innerWidth < 700) window.scrollTo({top: document.querySelector('main').offsetTop - 30, behavior: 'smooth'});
+            });
+        });
+
+        // Project modal interactivity
+        const projects = document.querySelectorAll('.project');
+        const modal = document.getElementById('projectModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const closeModal = document.getElementById('closeModal');
+        projects.forEach(project => {
+            project.addEventListener('click', () => {
+                modalTitle.textContent = project.dataset.title;
+                modalDescription.textContent = project.dataset.description;
+                modal.style.display = 'flex';
+            });
+        });
+        closeModal.onclick = function() {
+            modal.style.display = 'none';
+        };
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        // Contact form interactivity
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successMessage.style.display = 'block';
+            contactForm.reset();
+            setTimeout(() => { successMessage.style.display = 'none'; }, 3000);
+        });
+
+        // Dark mode toggle
+        const darkToggle = document.getElementById('darkToggle');
+        darkToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            darkToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+
+        // Dropdown interactivity
+        const dropdown = document.getElementById('dropdown');
+        const dropdownBtn = document.getElementById('dropdownBtn');
+        dropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+        document.body.addEventListener('click', () => {
+            dropdown.classList.remove('show');
+        });
+    </script>
+</body>
+</html></footer>
