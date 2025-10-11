@@ -474,11 +474,6 @@
         <div class="header-actions">
             <button class="dark-toggle" id="darkToggle" title="Toggle dark mode"></button>
             <div class="dropdown" id="dropdown">
-                <button class="dropdown-btn" id="dropdownBtn">About Website ⏷</button>
-                <div class="dropdown-content">
-                    <strong>About this Website</strong>
-                    <br><br>
-                    This is Siraj Bishar's interactive portfolio, built to showcase my projects, skills, and testimonials. Explore each section to learn more about my journey as an eager software developer!
                 </div>
             </div>
         </div>
@@ -522,15 +517,15 @@
             <h2>Testimonials</h2>
             <div class="testimonials">
                 <div class="testimonial">
-                    Siraj exceeded our expectations! His attention to detail and creative solutions brought our vision to life.
+                    Siraj exceeded our expectations in every way. From the beginning, he demonstrated a clear understanding of our goals and turned our ideas into something far more refined and meaningful than we had envisioned. His attention to detail is remarkable, and every element he created felt purposeful and thoughtfully designed. What impressed us most was his creativity and problem-solving mindset, as he consistently found innovative ways to enhance the project. Working with Siraj was a seamless experience that reflected his professionalism, technical skill, and genuine commitment to delivering high-quality results that truly bring a vision to life.
                     <div class="testimonial-client">– Amina K.</div>
                 </div>
                 <div class="testimonial">
-                    Working with Siraj was a pleasure. He communicates clearly and delivers high-quality work on time.
+                    Working with Siraj was a true pleasure from start to finish. He maintains clear and consistent communication, ensuring that every stage of the project aligns perfectly with expectations. His professionalism and ability to listen make collaboration effortless, and his technical expertise shines through in the quality of his work. Every task he undertakes is approached with precision, creativity, and a genuine commitment to excellence. Siraj not only meets deadlines but often anticipates project needs ahead of time, making the process smooth and stress-free. His reliability and dedication make him an outstanding partner for any development project.
                     <div class="testimonial-client">– John M.</div>
                 </div>
                 <div class="testimonial">
-                    I highly recommend Siraj for any web project. His technical skills and professionalism are top-notch!
+                    I highly recommend Siraj for any web development project. His technical skills, creativity, and professionalism consistently stand out in every aspect of his work. From initial planning to final delivery, he approaches each task with clarity, precision, and a deep understanding of modern web technologies. Siraj communicates effectively, listens carefully to client needs, and transforms ideas into functional, visually appealing solutions that exceed expectations. He demonstrates reliability, strong problem-solving abilities, and a genuine passion for building meaningful digital experiences. Anyone seeking a skilled and dependable developer would find working with Siraj both rewarding and inspiring.
                     <div class="testimonial-client">– Fatima S.</div>
                 </div>
             </div>
@@ -563,13 +558,19 @@
             </form>
             <br>
             <p>Email: sirajbishar@yahoo.com</p>
-            <p>LinkedIn: <a href="#" target="_blank" style="color:var(--accent);text-decoration:underline;">Siraj Bishar</a></p>
+    
         </section>
         <!-- Stack -->
         <section id="stack">
             <h2>My Stack</h2>
             <div class="about-text">
-                <strong>Coming soon:</strong> Here you'll find a creative showcase of my full stack, tools, and frameworks as an eager software developer!
+                <strong></strong> My stack represents a balance between creativity, functionality, and innovation. Over time, I have built a strong foundation across both front-end and back-end technologies, allowing me to create complete, efficient, and user-centered solutions. On the front end, I specialize in HTML5, CSS3, and JavaScript, using frameworks such as React and Next.js to build dynamic, responsive, and visually appealing interfaces. I focus on writing clean and maintainable code that enhances performance while providing users with smooth, engaging experiences.
+
+On the back end, I work extensively with Node.js and Express, developing robust server-side logic and integrating RESTful APIs to ensure seamless communication between systems. I frequently use MongoDB for database management, taking advantage of its flexibility and scalability for data-driven applications. My familiarity with SQL databases, authentication systems, and cloud deployment using platforms like Vercel and Render helps me deliver complete, production-ready solutions.
+
+Beyond web technologies, I explore areas such as  Python scripting, and automation, which broaden my problem-solving perspective. My workflow incorporates Git for version control, Agile methodologies for iterative development, and UI/UX design principles to align technology with user experience.
+
+I am constantly learning and adapting to new tools, ensuring that I stay ahead of trends in web development. My stack is more than a list of technologies; it reflects my growth, adaptability, and dedication to building solutions that are not only functional but also meaningful and ready for the future.
             </div>
         </section>
     </main>
@@ -585,7 +586,8 @@
         &copy; 2024 Siraj Bishar. All rights reserved.
     </footer>
     <script>
-        // Navigation interactivity
+        /* Navigation interactivity */
+        // Set initial dark mode icon
         const navLinks = document.querySelectorAll('nav a');
         const sections = document.querySelectorAll('main section');
         navLinks.forEach(link => {
@@ -635,7 +637,7 @@
         const darkToggle = document.getElementById('darkToggle');
         darkToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            darkToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            darkToggle.textContent = document.body.classList.contains('dark-mode') ? 'Dark' : 'Light';
         });
 
         // Dropdown interactivity
