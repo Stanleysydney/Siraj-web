@@ -563,7 +563,7 @@ I am constantly learning and adapting to new tools, ensuring that I stay ahead o
         </div>
     </div>
     <footer style="text-align:center;padding:1.2rem 0;background:rgba(24,24,27,0.7);color:var(--white);margin-top:2rem;font-family:'Inter',Arial,sans-serif;">
-        &copy; 2024 Siraj Bishar. All rights reserved.
+        &copy; 2025 Siraj Bishar. All rights reserved.
     </footer>
     <script>
         /* Navigation interactivity */
@@ -614,6 +614,36 @@ I am constantly learning and adapting to new tools, ensuring that I stay ahead o
         });
 
         // Dark mode toggle
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.body.classList.add('dark-mode');
+                document.body.style.background = '#000';
+                document.querySelector('header').style.background = 'rgba(0,0,0,0.85)';
+                document.querySelector('footer').style.background = 'rgba(0,0,0,0.85)';
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.body.style.background = '';
+                document.querySelector('header').style.background = 'rgba(24,24,27,0.7)';
+                document.querySelector('footer').style.background = 'rgba(24,24,27,0.7)';
+            }
+        }
+
+        // Set initial mode based on system preference or previous choice
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedMode = localStorage.getItem('darkMode');
+        setDarkMode(savedMode === 'true' || (savedMode === null && prefersDark));
+
+        // Update toggle button text
+        const darkToggle = document.getElementById('darkToggle');
+        darkToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light' : 'Dark';
+
+        // Listen for toggle
+        darkToggle.addEventListener('click', () => {
+            const isDark = !document.body.classList.contains('dark-mode');
+            setDarkMode(isDark);
+            darkToggle.textContent = isDark ? 'Light' : 'Dark';
+            localStorage.setItem('darkMode', isDark);
+        });
         const darkToggle = document.getElementById('darkToggle');
         darkToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
